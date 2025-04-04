@@ -1,26 +1,31 @@
+package ex07;
+
 public class Bola {
     private String cor;
     private double raio;
 
-    public String getCor() {
-        return cor;
-    }
-
-    public void setCor(String cor) {
+    public Bola(String cor, double raio) {
         this.cor = cor;
-    }
-
-    public double getRaio() {
-        return raio;
-    }
-
-    public void setValor(double valor) {
         this.raio = raio;
     }
-    public double class maiorBola(Bola bola1 , Bola bola2,Bola bola3){
-        double  aux = 0;
 
+    public Bola maiorBola(Bola a,Bola b){
+        Bola aux  = null;
+
+        if (this.raio > a.raio && this.raio > b.raio ){
+            aux = this;
+        }
+        else if (a.raio > b.raio){
+            aux = a;
+
+        }
+        else {
+            aux = b;
+        }
         return aux;
+    }
+    public String retornarDados(){
+        return cor + " " + raio;
     }
 
 }
